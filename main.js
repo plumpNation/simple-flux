@@ -15,7 +15,22 @@ const
         }
     };
 
+let accordion,
+    stateDisplay;
+
 function init() {
+    accordion    = createAccordion();
+    stateDisplay = document.getElementById('accordion-state');
+
+    updateView();
+}
+
+function updateView() {
+    accordion.update(appStore.accordion);
+    stateDisplay.textContent = appStore.accordion.closed ? 'closed' : 'open';
+}
+
+function createAccordion() {
     // Setup one Accordion
     const accordion = new Accordion(appStore.accordion);
 
@@ -23,12 +38,14 @@ function init() {
 
     // This could easily be in the state model too...
     accordion.onToggle = () => onToggle(accordion);
+
+    return accordion;
 }
 
-function onToggle(accordion) {
+function onToggle() {
     // NOTE: the controller controls the view state model, not the component.
     appStore.accordion.closed = !appStore.accordion.closed;
 
     // Now update the component with the updated data.
-    accordion.update(appStore.accordion);
+    updateView();
 }
