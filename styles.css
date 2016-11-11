@@ -19,3 +19,7 @@
 .accordion .content {
     padding: 1rem;
 }
+
+.accordion.closed .content {
+    display: none;
+}
