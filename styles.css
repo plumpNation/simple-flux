@@ -1,0 +1,21 @@
+.accordion {
+    border: 1px solid grey;
+}
+
+.accordion h1 {
+    margin: 0;
+}
+
+.accordion h1 button {
+    background: lightblue;
+    border: 0;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    text-align: left;
+    font-size: inherit;
+    width: 100%;
+}
+
+.accordion .content {
+    padding: 1rem;
+}
