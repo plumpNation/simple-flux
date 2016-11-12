@@ -12,3 +12,5 @@ We start by creating a simple accordion component. It updates it's own state.
 Then we move on to see why this won't scale as the view fills with components.
 
 Checkout the branches stage{1-6} to see the progress of the demo.
+
+The final branch stage7 is a conversion of our vanilla component to RiotJS to see a different approach using a micro library.
