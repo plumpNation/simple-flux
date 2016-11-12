@@ -19,7 +19,7 @@ let accordion,
     stateDisplay;
 
 function init() {
-    accordion    = createAccordion();
+    accordion = createAccordion();
     stateDisplay = document.getElementById('accordion-state');
 
     updateView();
@@ -31,13 +31,11 @@ function updateView() {
 }
 
 function createAccordion() {
-    // Setup one Accordion
-    const accordion = new Accordion(appStore.accordion);
+    // Setup one <accordion> tag
+    const accordion = riot.mount('accordion', {opts: appStore.accordion})[0];
 
-    document.body.appendChild(accordion.element);
-
-    // This could easily be in the state model too...
-    accordion.onToggle = () => onToggle(accordion);
+    // We can use the riot observable pattern now
+    accordion.on('toggle', () => onToggle(accordion));
 
     return accordion;
 }
