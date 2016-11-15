@@ -1,12 +1,5 @@
 // Let's go completely vanilla
 function Accordion(viewData) {
-    this.element     = null;
-    this.content     = null;
-    this.title       = null;
-
-    this.titleData   = null;
-    this.contentData = null;
-
     this._render(viewData);
     this._bindUI();
 }
