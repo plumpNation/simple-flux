@@ -4,12 +4,8 @@ let appStore = {
     accordion: {
         'id': 'my-accordion',
         'title': 'My title',
-        'content':
-            `<p>
-                This is some content and it probably came from a service
-                of some kind. I doubt you have hardcoded content in your
-                application.
-            </p>`
+        'content': `This is some content and it probably came from a service
+            of some kind. I doubt you have hardcoded content in your application.`
     }
 };
 

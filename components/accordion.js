@@ -21,9 +21,9 @@ Accordion.prototype._render = function (viewData) {
     const markup = `
         <article id="${viewData.id}" class="accordion">
             <h1><button>${viewData.title}</button></h1>
-            <div class="content">
+            <p class="content">
                 ${viewData.content}
-            </div>
+            </p>
         </article>`,
 
         container = document.createElement('div');
