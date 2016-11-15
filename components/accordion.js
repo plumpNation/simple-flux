@@ -8,8 +8,9 @@ function Accordion(viewData) {
 }
 
 Accordion.prototype.toggle = function () {
-    // What should happen when we want to 'close' the accordion?
+    // NOTE: The accordion is now responsible for it's state.
     this.element.classList.toggle('closed');
+    // At this point, no other component is aware of it being either open or closed.
 };
 
 Accordion.prototype._bindUI = function () {
