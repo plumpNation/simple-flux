@@ -22,13 +22,10 @@ function init() {
     document.body.appendChild(accordion.element);
 
     // This could easily be in the state model too...
-    accordion.onToggle = () => onToggle(accordion);
-}
+    accordion.toggle = () => {
+        // NOTE: the controller controls the view state model, not the component.
+        appStore.accordion.closed = !appStore.accordion.closed;
 
-function onToggle(accordion) {
-    // NOTE: the controller controls the view state model, not the component.
-    appStore.accordion.closed = !appStore.accordion.closed;
-
-    // Now update the component with the updated data.
-    accordion.update(appStore.accordion);
+        accordion.update(appStore.accordion);
+    };
 }
