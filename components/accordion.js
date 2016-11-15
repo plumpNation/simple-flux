@@ -20,12 +20,8 @@ Accordion.prototype.update = function (viewData) {
     }
 }
 
-Accordion.prototype.toggle = function () {
-    // What should happen when we want to 'close' the accordion?
-    if (typeof this.onToggle === 'function') {
-        this.onToggle();
-    }
-};
+// can be overridden
+Accordion.prototype.toggle = function noop() {};
 
 Accordion.prototype._bindUI = function () {
     this.element.querySelector('h1').addEventListener('click', () => this.toggle());
