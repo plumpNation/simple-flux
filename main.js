@@ -7,11 +7,9 @@ const
             'id': 'my-accordion',
             'title': 'My title',
             'content':
-                `<p>
-                    This is some content and it probably came from a service
+                `This is some content and it probably came from a service
                     of some kind. I doubt you have hardcoded content in your
-                    application.
-                </p>`
+                    application.`
         }
     };
 

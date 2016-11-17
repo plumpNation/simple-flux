@@ -5,11 +5,5 @@ riot.tag2('accordion', '<article id="{id}" class="accordion {\'closed\': closed}
 
         this.on('mount', () => this.contentElement = this.root.querySelector('.content'));
 
-        this.on('update', () => {
-            if (this.contentElement) {
-                this.contentElement.innerHTML = this.content;
-            }
-        });
-
         this.toggle = () => this.trigger('toggle');
 });
